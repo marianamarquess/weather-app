@@ -77,7 +77,7 @@ function App() {
           console.log(userLocation);
 
           const res = await fetch(
-            `http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q="${userLocation}"&days=${
+            `https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q="${userLocation}"&days=${
               forecastDays + 1
             }&aqi=no&alerts=no`
           );
@@ -111,7 +111,7 @@ function App() {
           setLoader(true);
 
           const res = await fetch(
-            `http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q=${query}&days=${
+            `https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q=${query}&days=${
               forecastDays + 1
             }&aqi=no&alerts=no`
           );

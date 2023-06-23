@@ -1,14 +1,18 @@
 import { IonIcon } from "@ionic/react";
 import { searchOutline } from "ionicons/icons";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function SearchBar({ setQuery }) {
   const [tempQuery, setTempQuery] = useState("");
+  const inputRef = useRef(null);
 
   function handleSearch(e) {
     e.preventDefault();
 
     if (tempQuery.length >= 3) setQuery(tempQuery);
+
+    setTempQuery("");
+    inputRef.current.blur();
   }
 
   return (
@@ -18,9 +22,10 @@ export default function SearchBar({ setQuery }) {
       </button>
       <input
         type="text"
-        placeholder="Search query"
+        placeholder="Search city..."
         value={tempQuery}
         onChange={(e) => setTempQuery(e.target.value)}
+        ref={inputRef}
       ></input>
     </form>
   );
