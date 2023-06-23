@@ -1,0 +1,124 @@
+@media (max-width: 1420px) {
+  main {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 1180px) {
+  main {
+    max-width: 80%;
+  }
+
+  .today-weather {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .today-weather h1,
+  .today-weather p {
+    text-align: center;
+  }
+
+  .today-icon-details {
+    width: auto;
+    gap: 1rem;
+  }
+
+  .today-details p {
+    text-align: start;
+  }
+
+  .search-bar {
+    height: 2.5rem;
+  }
+
+  .search-bar input {
+    width: 50%;
+  }
+}
+
+@media (max-width: 730px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .today-icon {
+    font-size: 6rem;
+  }
+
+  .search-bar {
+    margin-top: 2rem;
+  }
+
+  .today-weather {
+    margin: 3rem 0;
+  }
+
+  .weekly-weather-container {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .weekly-weather {
+    flex-direction: column;
+  }
+
+  .daily-weather {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .daily-weather .weather-icon {
+    text-align: center;
+  }
+
+  .daily-weather .temperature {
+    text-align: end;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .today-icon {
+    font-size: 5rem;
+  }
+  .today-weather p {
+    font-size: 1rem;
+  }
+
+  .search-bar input {
+    width: 60%;
+  }
+
+  .daily-weather p {
+    font-size: 1rem;
+  }
+
+  .daily-weather .weather-icon {
+    font-size: 2.5rem;
+  }
+
+  .weekly-weather-container {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+}
