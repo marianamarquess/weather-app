@@ -151,7 +151,9 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
   margin-top: 10rem;
+  max-width: 70%;
 }
 
 .error .search-icon {
@@ -166,12 +168,15 @@ h3 {
   margin-bottom: 0.3rem;
   font-size: 1.7rem;
   font-weight: 500;
+  text-align: center;
 }
 
 .error p {
   color: #d1d5db;
   font-weight: 300;
   font-size: 1.1rem;
+  text-align: center;
+  line-height: 1rem;
 }
 
 .loader {
