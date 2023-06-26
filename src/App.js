@@ -130,6 +130,13 @@ function App() {
     [query]
   );
 
+  useEffect(function () {
+    if (!userLocation && !query) return;
+    document.title = query
+      ? `Geo-Weather App | ${query[0].toUpperCase() + query.slice(1)}`
+      : `Geo-Weather App | ${userLocation}`;
+  });
+
   return (
     <>
       <header>
