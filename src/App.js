@@ -74,15 +74,11 @@ function App() {
         try {
           setLoader(true);
 
-          console.log(userLocation);
-
           const res = await fetch(
             `https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q="${userLocation}"&days=${
               forecastDays + 1
             }&aqi=no&alerts=no`
           );
-
-          console.log(res);
 
           if (!res.ok) throw new Error(`No results found for your location`);
 
@@ -100,7 +96,7 @@ function App() {
         getLocationForecast();
       }
     },
-    [query, userLocation]
+    [userLocation]
   );
 
   useEffect(
